@@ -1,37 +1,103 @@
 <?php
- include('dbconnection.php');
-$heading="Remove Product";
-//$content="Hello";
-if(isset($_POST['submit']))
-{
-	
-	
-	$prod_id=$_POST['prod_id'];
-	//$sql="INSERT INTO category (`category_id`, `category_name`) VALUES (NULL, '$cat_name')";
-	$sql="DELETE FROM `product` WHERE `id` =' $prod_id'";
-	//echo $sql;
-	$result=$con->query($sql);
-	if($result)
-	{
-?>
-<script>
-alert("Record deleted succesfully!");
-	window.location.href = 'admin_home.php';
-</script>
+session_start();
+//echo $_SESSION['uid'];
+require_once "config.php";
+require_once "helpers.php";
 
-<?php
-	}
+// Define variables and initialize with empty values
+$Fullname = "";
+$Username = "";
+$Address = "";
+$Email = "";
+$Phone = "";
+
+$Fullname_err = "";
+$Username_err = "";
+$Address_err = "";
+$Email_err = "";
+$Phone_err = "";
+
+
+// Processing form data when form is submitted
+if(isset($_POST["uid"])){
+    // Get hidden input value
+    $uid =$_SESSION['uid'];
+
+    $Fullname = trim($_POST["Fullname"]);
+		$Username = trim($_POST["Username"]);
+		$Address = trim($_POST["Address"]);
+		$Email = trim($_POST["Email"]);
+		$Phone = trim($_POST["Phone"]);
+	//echo $Fullname;
+		
+
+    // Prepare an update statement
+    $dsn = "mysql:host=$db_server;dbname=$db_name;charset=utf8mb4";
+    $options = [
+        PDO::ATTR_EMULATE_PREPARES   => false, // turn off emulation mode for "real" prepared statements
+        PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION, //turn on errors in the form of exceptions
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, //make the default fetch be an associative array
+    ];
+    try {
+        $pdo = new PDO($dsn, $db_user, $db_password, $options);
+    } catch (Exception $e) {
+        error_log($e->getMessage());
+        exit('Something weird happened');
+    }
+
+    $vars = parse_columns('registration', $_POST);
+    $stmt = $pdo->prepare("UPDATE registration SET Fullname=?,Username=?,Address=?,Email=?,Phone=? WHERE uid=?");
+
+    if(!$stmt->execute([ $Fullname,$Username,$Address,$Email,$Phone,$uid  ])) {
+        echo "Something went wrong. Please try again later.";
+      //  header("location: error.php");
+    } else {
+        $stmt = null;
+        header("location: user_home.php");
+    }
+} else {
+   
 	
+        $uid =  trim($_SESSION["uid"]);
+
+        // Prepare a select statement
+        $sql = "SELECT * FROM registration WHERE uid = '$uid'";
 	
+        if($stmt = mysqli_prepare($link, $sql)){
+            // Set parameters
+            $param_id = $uid;
+//echo $sql;
+                        // Attempt to execute the prepared statement
+            if(mysqli_stmt_execute($stmt)){
+                $result = mysqli_stmt_get_result($stmt);
+
+                if(mysqli_num_rows($result) == 1){
+                    /* Fetch result row as an associative array. Since the result set
+                    contains only one row, we don't need to use while loop */
+                    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+                    // Retrieve individual field value
+
+                    $Fullname = $row["Fullname"];
+					$Username = $row["Username"];
+					$Address = $row["Address"];
+					$Email = $row["Email"];
+					$Phone = $row["Phone"];
+					
+
+                } 
+
+            } 
+        }
+
+        // Close statement
+        mysqli_stmt_close($stmt);
+
+     
 }
 ?>
-	
-	
-	
-	
-	
 
-<!-- window.location.href = 'admin_home.php';-->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,13 +111,13 @@ alert("Record deleted succesfully!");
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>THE MEHANDI STUDIO </title>
+    <title>THE MEHANDI STUDIO</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/logo design/logo1.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
     <!-- Bootstrap CSS -->
@@ -236,7 +302,7 @@ alert("Record deleted succesfully!");
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Remove Product</h2>
+                    <h2>View/Update Profile</h2>
                     
                 </div>
             </div>
@@ -252,33 +318,39 @@ alert("Record deleted succesfully!");
                     <div class="contact-form-right">
                        <!--  <h2>GET IN TOUCH</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio justo, ultrices ac nisl sed, lobortis porta elit. Fusce in metus ac ex venenatis ultricies at cursus mauris.</p> -->
-	<form action="" method="post">
-		 <table border="0">
-			 <tr><td>Select the Product you want to delete</td>
-				 <td>
-      <?php
-	$sql="select*from product";
-	$result = $con->query($sql);
+                            <h2 class="text-center">UPDATE PROFILE</h2>
+                              <form action="<?php echo htmlspecialchars(basename($_SERVER['REQUEST_URI'])); ?>" method="post">
 
-if ($result->num_rows > 0) {
-  // output data of each row
-	
-	echo "<select name='prod_id'>";
-  while($row = $result->fetch_assoc()) {
-   echo "<option value =".$row['id'].">".$row['name']."</option>";
-  }
-	echo "</select>";
-} else {
-  echo "0 results";
-}
-	?>
-				 </td></tr>
-		   
+                        <div class="form-group">
+                                <label>Fullname</label>
+                                <input type="text" name="Fullname" maxlength="15"class="form-control" value="<?php echo $Fullname; ?>">
+                                <span class="form-text"><?php echo $Fullname_err; ?></span>
+                            </div>
+						<div class="form-group">
+                                <label>Username</label>
+                                <input type="text" name="Username" maxlength="15"class="form-control" value="<?php echo $Username; ?>">
+                                <span class="form-text"><?php echo $Username_err; ?></span>
+                            </div>
+						<div class="form-group">
+                                <label>Address</label>
+                                <input type="text" name="Address" maxlength="30"class="form-control" value="<?php echo $Address; ?>">
+                                <span class="form-text"><?php echo $Address_err; ?></span>
+                            </div>
+						<div class="form-group">
+                                <label>Email</label>
+                                <input type="text" name="Email" maxlength="30"class="form-control" value="<?php echo $Email; ?>">
+                                <span class="form-text"><?php echo $Email_err; ?></span>
+                            </div>
+						<div class="form-group">
+                                <label>Phone</label>
+                                <input type="text" name="Phone" maxlength="12"class="form-control" value="<?php echo $Phone; ?>">
+                                <span class="form-text"><?php echo $Phone_err; ?></span>
+                            </div>
 
-				<tr><td></td><td><input type="submit" name="submit"></td></tr>
-				 </table>
-		   
-		   </form>
+                        <input type="hidden" name="uid" value="<?php echo $uid; ?>"/>
+                        <input type="submit" class="btn btn-primary" value="Submit">
+                        
+                    </form>
                     </div>
                 </div>
 				<!-- <div class="col-lg-4 col-sm-12">
@@ -303,12 +375,12 @@ if ($result->num_rows > 0) {
     </div>
     <!-- End Cart -->
 
-    <!-- Start Instagram Feed 
+    <!-- Start Instagram Feed  -->
     <div class="instagram-box">
         <div class="main-instagram owl-carousel owl-theme">
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-01.jpg" alt="" />
+                    <img src="images/background Image/b.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -316,7 +388,7 @@ if ($result->num_rows > 0) {
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-02.jpg" alt="" />
+                    <img src="images/background Image/c.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -324,7 +396,7 @@ if ($result->num_rows > 0) {
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-03.jpg" alt="" />
+                    <img src="images/background Image/d.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -332,7 +404,7 @@ if ($result->num_rows > 0) {
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-04.jpg" alt="" />
+                    <img src="images/background Image/e.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -340,7 +412,7 @@ if ($result->num_rows > 0) {
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-05.jpg" alt="" />
+                    <img src="images/background Image/f.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -348,7 +420,7 @@ if ($result->num_rows > 0) {
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-06.jpg" alt="" />
+                    <img src="images/background Image/g.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -356,7 +428,7 @@ if ($result->num_rows > 0) {
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-07.jpg" alt="" />
+                    <img src="images/background Image/h.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -364,7 +436,7 @@ if ($result->num_rows > 0) {
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-08.jpg" alt="" />
+                    <img src="images/background Image/i.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -372,7 +444,7 @@ if ($result->num_rows > 0) {
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-09.jpg" alt="" />
+                    <img src="images/indian design/IMG-20211223-WA0204.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -380,19 +452,19 @@ if ($result->num_rows > 0) {
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-05.jpg" alt="" />
+                    <img src="images/indian design/IMG-20201123-WA0168.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- End Instagram Feed  -->
 
 
     <!-- Start Footer  -->
-    <!-- <footer>
+    <footer>
         <div class="footer-main">
             <div class="container">
 				<div class="row">
@@ -473,14 +545,14 @@ if ($result->num_rows > 0) {
                 </div>
             </div>
         </div>
-    </footer> -->
+    </footer>
     <!-- End Footer  -->
 
     <!-- Start copyright  -->
-    <!-- <div class="footer-copyright">
+    <div class="footer-copyright">
         <p class="footer-company">All Rights Reserved. &copy; 2018 <a href="#">ThewayShop</a> Design By :
             <a href="https://html.design/">html design</a></p>
-    </div> -->
+    </div>
     <!-- End copyright  -->
 
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>

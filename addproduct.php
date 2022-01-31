@@ -1,22 +1,44 @@
 <?php
  include('dbconnection.php');
-$heading="Remove Product";
-//$content="Hello";
+$heading="Add Product";
+$content="Hello";
 if(isset($_POST['submit']))
 {
 	
 	
-	$prod_id=$_POST['prod_id'];
-	//$sql="INSERT INTO category (`category_id`, `category_name`) VALUES (NULL, '$cat_name')";
-	$sql="DELETE FROM `product` WHERE `id` =' $prod_id'";
-	//echo $sql;
+	$prod_name=$_POST["prod_name"];
+		$cat_name=$_POST["cat_id"];
+	      $prod_img= basename($_FILES["prod_img"]["name"]);
+
+      $ext = pathinfo( $prod_img, PATHINFO_EXTENSION);
+	$fnn=date("YmdHis").".".$ext;
+	 $target_dir = "uploads/";
+      // $target_file = $target_dir . basename($_FILES["file1"]["name"]);
+      $target_file = $target_dir.$fnn;
+      if (move_uploaded_file($_FILES["prod_img"]["tmp_name"], $target_file)) {
+          // echo "The file ". htmlspecialchars( basename( $_FILES["file1"]["name"])). " has been uploaded.";
+          // echo "<script>alert('ok')</script>";
+        }
+        else
+        {
+          // echo "<script>alert('error')</script>";
+        }
+
+	
+		$prod_price=$_POST["prod_price"];
+		$prod_qty=$_POST["prod_qty"];
+		$prod_details=$_POST["prod_details"];
+		
+	
+	
+	$sql="INSERT INTO `product` (`id`, `image`, `name`, `Catagory`, `price`, `quantity`, `details`) VALUES (NULL, '$target_file', '$prod_name', '$cat_name', '$prod_price', '$prod_qty', '$prod_details');";
 	$result=$con->query($sql);
 	if($result)
 	{
 ?>
 <script>
-alert("Record deleted succesfully!");
-	window.location.href = 'admin_home.php';
+alert("Record added succesfully!");
+		window.location.href = 'admin_home.php';
 </script>
 
 <?php
@@ -25,13 +47,9 @@ alert("Record deleted succesfully!");
 	
 }
 ?>
-	
-	
-	
-	
-	
 
-<!-- window.location.href = 'admin_home.php';-->
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +63,7 @@ alert("Record deleted succesfully!");
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>THE MEHANDI STUDIO </title>
+    <title>THE MEHANDI STUDIO</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -236,7 +254,7 @@ alert("Record deleted succesfully!");
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Remove Product</h2>
+                    <h2>Add Product</h2>
                     
                 </div>
             </div>
@@ -252,29 +270,30 @@ alert("Record deleted succesfully!");
                     <div class="contact-form-right">
                        <!--  <h2>GET IN TOUCH</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio justo, ultrices ac nisl sed, lobortis porta elit. Fusce in metus ac ex venenatis ultricies at cursus mauris.</p> -->
-	<form action="" method="post">
-		 <table border="0">
-			 <tr><td>Select the Product you want to delete</td>
-				 <td>
-      <?php
-	$sql="select*from product";
+       <form action="" method="post"  enctype="multipart/form-data">
+		    <table border="0">
+				<tr><td> Name </td><td><input name="prod_name" type="text" autofocus="autofocus" required="required" class="form-control"></td></tr>
+				<tr><td>Category</td><td>
+					<?php
+	$sql="select*from category";
 	$result = $con->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
 	
-	echo "<select name='prod_id'>";
+	echo "<select name='cat_id'>";
   while($row = $result->fetch_assoc()) {
-   echo "<option value =".$row['id'].">".$row['name']."</option>";
+   echo "<option value =".$row['category_name'].">".$row['category_name']."</option>";
   }
 	echo "</select>";
 } else {
   echo "0 results";
 }
-	?>
-				 </td></tr>
-		   
-
+	?></td></tr>
+				<tr><td>Image </td><td><input name="prod_img" type="file"></td></tr>
+				<tr><td>Price </td><td><input name="prod_price" type="text"  required="required" class="form-control"></td></tr>
+				<tr><td>Quantity </td><td><input name="prod_qty" type="text" required="required" class="form-control"></td></tr>
+				<tr><td>Details </td><td><textarea name="prod_details" class="form-control"></textarea></td></tr>
 				<tr><td></td><td><input type="submit" name="submit"></td></tr>
 				 </table>
 		   
@@ -303,12 +322,13 @@ if ($result->num_rows > 0) {
     </div>
     <!-- End Cart -->
 
-    <!-- Start Instagram Feed 
+    <!-- Start Instagram Feed  -->
+    <!-- Start Instagram Feed  -->
     <div class="instagram-box">
         <div class="main-instagram owl-carousel owl-theme">
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-01.jpg" alt="" />
+                    <img src="images/background Image/b.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -316,7 +336,7 @@ if ($result->num_rows > 0) {
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-02.jpg" alt="" />
+                    <img src="images/background Image/c.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -324,7 +344,7 @@ if ($result->num_rows > 0) {
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-03.jpg" alt="" />
+                    <img src="images/background Image/d.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -332,7 +352,7 @@ if ($result->num_rows > 0) {
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-04.jpg" alt="" />
+                    <img src="images/background Image/e.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -340,7 +360,7 @@ if ($result->num_rows > 0) {
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-05.jpg" alt="" />
+                    <img src="images/background Image/f.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -348,7 +368,7 @@ if ($result->num_rows > 0) {
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-06.jpg" alt="" />
+                    <img src="images/background Image/g.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -356,7 +376,7 @@ if ($result->num_rows > 0) {
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-07.jpg" alt="" />
+                    <img src="images/background Image/h.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -364,7 +384,7 @@ if ($result->num_rows > 0) {
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-08.jpg" alt="" />
+                    <img src="images/background Image/i.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -372,7 +392,7 @@ if ($result->num_rows > 0) {
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-09.jpg" alt="" />
+                    <img src="images/indian design/IMG-20211223-WA0204.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -380,14 +400,15 @@ if ($result->num_rows > 0) {
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-05.jpg" alt="" />
+                    <img src="images/indian design/IMG-20201123-WA0168.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
+    <!-- End Instagram Feed  -->
     <!-- End Instagram Feed  -->
 
 

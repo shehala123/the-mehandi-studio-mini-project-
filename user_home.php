@@ -1,38 +1,3 @@
-<?php
- include('dbconnection.php');
-$heading="Remove Product";
-//$content="Hello";
-if(isset($_POST['submit']))
-{
-	
-	
-	$prod_id=$_POST['prod_id'];
-	//$sql="INSERT INTO category (`category_id`, `category_name`) VALUES (NULL, '$cat_name')";
-	$sql="DELETE FROM `product` WHERE `id` =' $prod_id'";
-	//echo $sql;
-	$result=$con->query($sql);
-	if($result)
-	{
-?>
-<script>
-alert("Record deleted succesfully!");
-	window.location.href = 'admin_home.php';
-</script>
-
-<?php
-	}
-	
-	
-}
-?>
-	
-	
-	
-	
-	
-
-<!-- window.location.href = 'admin_home.php';-->
-
 <!DOCTYPE html>
 <html lang="en">
 <!-- Basic -->
@@ -45,7 +10,7 @@ alert("Record deleted succesfully!");
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>THE MEHANDI STUDIO </title>
+    <title>the mehandi studio</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -77,17 +42,17 @@ alert("Record deleted succesfully!");
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 					<div class="custom-select-box">
-                       <!--  <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
+                        <!-- <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
 							<option>¥ JPY</option>
 							<option>$ USD</option>
 							<option>€ EUR</option>
 						</select> -->
                     </div>
                     <div class="right-phone-box">
-                        <!-- <p>Call US :- <a href="#"> +11 900 800 100</a></p> -->
+                       <!--  <p>Call US :- <a href="#"> +11 900 800 100</a></p> -->
                     </div>
                     <div class="our-link">
-                        <!-- <ul>
+                       <!--  <ul>
                             <li><a href="#"><i class="fa fa-user s_color"></i> My Account</a></li>
                             <li><a href="#"><i class="fas fa-location-arrow"></i> Our location</a></li>
                             <li><a href="#"><i class="fas fa-headset"></i> Contact Us</a></li>
@@ -103,8 +68,8 @@ alert("Record deleted succesfully!");
 					</div>
                     <div class="text-slid-box">
                         <div id="offer-box" class="carouselTicker">
-                            <!-- <ul class="offer-box">
-                                <li>
+                            <ul class="offer-box">
+                                <!-- <li>
                                     <i class="fab fa-opencart"></i> 20% off Entire Purchase Promo code: offT80
                                 </li>
                                 <li>
@@ -127,8 +92,8 @@ alert("Record deleted succesfully!");
                                 </li>
                                 <li>
                                     <i class="fab fa-opencart"></i> Off 50%! Shop Now 
-                                </li>
-                            </ul> -->
+                                </li> -->
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -152,42 +117,74 @@ alert("Record deleted succesfully!");
                 <!-- End Header Navigation -->
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="navbar-menu">
-					<ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-						<li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-						<li class="dropdown">
-							<a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
-							<ul class="dropdown-menu">
-								<li><a href="shop.html">Sidebar Shop</a></li>
-								<li><a href="shop-detail.html">Shop Detail</a></li>
-								<li><a href="cart.html">Cart</a></li>
-								<li><a href="checkout.html">Checkout</a></li>
-								<li><a href="my-account.html">My Account</a></li>
-								<li><a href="wishlist.html">Wishlist</a></li>
-							</ul>
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                                                <li class="dropdown"><a class="nav-link" href="view_category" data-toggle="dropdown">Category</a>
+						<ul class="dropdown-menu">
+							<li><a href="view_category.php">View</a></li>
+						</ul>
 						</li>
-						<li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-						<li class="nav-item active"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                        <li class="dropdown"> <a href="productview.php" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Product</a>
+                            <ul class="dropdown-menu">
+
+								<li><a href="productview.php">View</a></li>
+
+                                <!-- <li><a href="#">Cart</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                                <li><a href="my-account.html">My Account</a></li>
+                                <li><a href="wishlist.html">Wishlist</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Orders</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">View</a></li>
+                                <li><a href="#">Manage</a></li>
+                                <!-- <li><a href="#">Cart</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                                <li><a href="my-account.html">My Account</a></li>
+                                <li><a href="wishlist.html">Wishlist</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Reports</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">User List</a></li>
+                                <li><a href="#">Reports</a></li>
+                                <!-- <li><a href="#">Cart</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                                <li><a href="my-account.html">My Account</a></li>
+                                <li><a href="wishlist.html">Wishlist</a></li> -->
+                            </ul>
+                        </li>
+                         <li class="nav-item"><a class="nav-link" href="">Payments</a></li>
+                        
+                         <li class="nav-item"><a class="nav-link" href="">Feedback</a></li>
+                        
+                         <li class="nav-item"><a class="nav-link" href="login.php">Logout</a></li>
+                        
+                       
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
 
                 <!-- Start Atribute Navigation -->
                 <div class="attr-nav">
-                    <!-- <ul>
-                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-                        <li class="side-menu"><a href="#">
-						<i class="fa fa-shopping-bag"></i>
-                            <span class="badge">3</span>
-							<p>My Cart</p>
-					</a></li>
-                    </ul> -->
+                    <ul>
+                        <!-- <li class="search"><a href="#"><i class="fa fa-search"></i></a></li> -->
+                        <li class="side-menu">
+							<!-- <a href="#">
+								<i class="fa fa-shopping-bag"></i>
+								<span class="badge">3</span>
+								<p>My Cart</p>
+							</a> -->
+						</li>
+                    </ul>
                 </div>
                 <!-- End Atribute Navigation -->
             </div>
             <!-- Start Side Menu -->
-            <div class="side">
+            <!-- <div class="side">
                 <a href="#" class="close-side"><i class="fa fa-times"></i></a>
                 <li class="cart-box">
                     <ul class="cart-list">
@@ -212,7 +209,7 @@ alert("Record deleted succesfully!");
                         </li>
                     </ul>
                 </li>
-            </div>
+            </div> -->
             <!-- End Side Menu -->
         </nav>
         <!-- End Navigation -->
@@ -231,80 +228,248 @@ alert("Record deleted succesfully!");
     </div>
     <!-- End Top Search -->
 
-    <!-- Start All Title Box -->
-    <div class="all-title-box">
+
+
+    <!-- Start Categories  -->
+    <div class="categories-shop">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <h2>Remove Product</h2>
-                    
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box"><a class="btn hvr-hover" href="#">Lorem ipsum dolor</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+					<h2>Welcome User, choose options below</h2>
+                   <table>
+					   <tr>
+			<td><a href="registration-update.php">View/Update Profile</a></td>
+		   </tr>
+       
+				     <tr>
+			 <td><a href="login.php">Logout</a></td>
+        </tr>
+      </table>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box"><a class="btn hvr-hover" href="#">Lorem ipsum dolor</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End All Title Box -->
+    <!-- End Categories -->
+	
+	<div class="box-add-products">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<div class="offer-box-products">
+						<img class="img-fluid" src="images/arabic design/a.jpg" alt="" />
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<div class="offer-box-products">
+						<img class="img-fluid" src="images/arabic design/IMG-20210708-WA0040.jpg" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <!-- Start Contact Us  -->
-    <div class="contact-box-main">
+    <!-- Start Products  -->
+    <div class="products-box">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-sm-12">
-                    <div class="contact-form-right">
-                       <!--  <h2>GET IN TOUCH</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio justo, ultrices ac nisl sed, lobortis porta elit. Fusce in metus ac ex venenatis ultricies at cursus mauris.</p> -->
-	<form action="" method="post">
-		 <table border="0">
-			 <tr><td>Select the Product you want to delete</td>
-				 <td>
-      <?php
-	$sql="select*from product";
-	$result = $con->query($sql);
+               <!--  <div class="col-lg-12">
+                    <div class="title-all text-center">
+                        <h1>Fruits & Vegetables</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
+                    </div>
+                </div> -->
+            </div>
+            <div class="row">
+                <!-- <div class="col-lg-12">
+                    <div class="special-menu text-center">
+                        <div class="button-group filter-button-group">
+                            <button class="active" data-filter="*">All</button>
+                            <button data-filter=".top-featured">Top featured</button>
+                            <button data-filter=".best-seller">Best seller</button>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
 
-if ($result->num_rows > 0) {
-  // output data of each row
-	
-	echo "<select name='prod_id'>";
-  while($row = $result->fetch_assoc()) {
-   echo "<option value =".$row['id'].">".$row['name']."</option>";
-  }
-	echo "</select>";
-} else {
-  echo "0 results";
-}
-	?>
-				 </td></tr>
-		   
-
-				<tr><td></td><td><input type="submit" name="submit"></td></tr>
-				 </table>
-		   
-		   </form>
+            <!-- <div class="row special-list">
+                <div class="col-lg-3 col-md-6 special-grid best-seller">
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                            <div class="type-lb">
+                                <p class="sale">Sale</p>
+                            </div>
+                            <img src="images/img-pro-01.jpg" class="img-fluid" alt="Image">
+                            <div class="mask-icon">
+                                <ul>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                </ul>
+                                <a class="cart" href="#">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="why-text">
+                            <h4>Lorem ipsum dolor sit amet</h4>
+                            <h5> $7.79</h5>
+                        </div>
                     </div>
                 </div>
-				<!-- <div class="col-lg-4 col-sm-12">
-                    <div class="contact-info-left">
-                        <h2>CONTACT INFO</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna diam, maximus ut ullamcorper quis, placerat id eros. Duis semper justo sed condimentum rutrum. Nunc tristique purus turpis. Maecenas vulputate. </p>
-                        <ul>
-                            <li>
-                                <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 9000 <br>Preston Street Wichita,<br> KS 87213 </p>
-                            </li>
-                            <li>
-                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+1-888 705 770</a></p>
-                            </li>
-                            <li>
-                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
-                            </li>
-                        </ul>
+
+                <div class="col-lg-3 col-md-6 special-grid top-featured">
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                            <div class="type-lb">
+                                <p class="new">New</p>
+                            </div>
+                            <img src="images/img-pro-02.jpg" class="img-fluid" alt="Image">
+                            <div class="mask-icon">
+                                <ul>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                </ul>
+                                <a class="cart" href="#">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="why-text">
+                            <h4>Lorem ipsum dolor sit amet</h4>
+                            <h5> $9.79</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 special-grid top-featured">
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                            <div class="type-lb">
+                                <p class="sale">Sale</p>
+                            </div>
+                            <img src="images/img-pro-03.jpg" class="img-fluid" alt="Image">
+                            <div class="mask-icon">
+                                <ul>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                </ul>
+                                <a class="cart" href="#">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="why-text">
+                            <h4>Lorem ipsum dolor sit amet</h4>
+                            <h5> $10.79</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 special-grid best-seller">
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                            <div class="type-lb">
+                                <p class="sale">Sale</p>
+                            </div>
+                            <img src="images/img-pro-04.jpg" class="img-fluid" alt="Image">
+                            <div class="mask-icon">
+                                <ul>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                </ul>
+                                <a class="cart" href="#">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="why-text">
+                            <h4>Lorem ipsum dolor sit amet</h4>
+                            <h5> $15.79</h5>
+                        </div>
                     </div>
                 </div> -->
             </div>
         </div>
     </div>
-    <!-- End Cart -->
+    <!-- End Products  -->
 
-    <!-- Start Instagram Feed 
-    <div class="instagram-box">
+    <!-- Start Blog  -->
+   <!--  <div class="latest-blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-all text-center">
+                        <h1>latest blog</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 col-xl-4">
+                    <div class="blog-box">
+                        <div class="blog-img">
+                            <img class="img-fluid" src="images/blog-img.jpg" alt="" />
+                        </div>
+                        <div class="blog-content">
+                            <div class="title-blog">
+                                <h3>Fusce in augue non nisi fringilla</h3>
+                                <p>Nulla ut urna egestas, porta libero id, suscipit orci. Quisque in lectus sit amet urna dignissim feugiat. Mauris molestie egestas pharetra. Ut finibus cursus nunc sed mollis. Praesent laoreet lacinia elit id lobortis.</p>
+                            </div>
+                            <ul class="option-blog">
+                                <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-eye"></i></a></li>
+                                <li><a href="#"><i class="far fa-comments"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-4">
+                    <div class="blog-box">
+                        <div class="blog-img">
+                            <img class="img-fluid" src="images/blog-img-01.jpg" alt="" />
+                        </div>
+                        <div class="blog-content">
+                            <div class="title-blog">
+                                <h3>Fusce in augue non nisi fringilla</h3>
+                                <p>Nulla ut urna egestas, porta libero id, suscipit orci. Quisque in lectus sit amet urna dignissim feugiat. Mauris molestie egestas pharetra. Ut finibus cursus nunc sed mollis. Praesent laoreet lacinia elit id lobortis.</p>
+                            </div>
+                            <ul class="option-blog">
+                                <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-eye"></i></a></li>
+                                <li><a href="#"><i class="far fa-comments"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-4">
+                    <div class="blog-box">
+                        <div class="blog-img">
+                            <img class="img-fluid" src="images/blog-img-02.jpg" alt="" />
+                        </div>
+                        <div class="blog-content">
+                            <div class="title-blog">
+                                <h3>Fusce in augue non nisi fringilla</h3>
+                                <p>Nulla ut urna egestas, porta libero id, suscipit orci. Quisque in lectus sit amet urna dignissim feugiat. Mauris molestie egestas pharetra. Ut finibus cursus nunc sed mollis. Praesent laoreet lacinia elit id lobortis.</p>
+                            </div>
+                            <ul class="option-blog">
+                                <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-eye"></i></a></li>
+                                <li><a href="#"><i class="far fa-comments"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    <!-- </div> -->
+    <!-- End Blog  -->
+
+
+    <!-- Start Instagram Feed  -->
+    <!-- <div class="instagram-box">
         <div class="main-instagram owl-carousel owl-theme">
             <div class="item">
                 <div class="ins-inner-box">
@@ -392,7 +557,7 @@ if ($result->num_rows > 0) {
 
 
     <!-- Start Footer  -->
-    <!-- <footer>
+    <footer>
         <div class="footer-main">
             <div class="container">
 				<div class="row">
@@ -473,14 +638,14 @@ if ($result->num_rows > 0) {
                 </div>
             </div>
         </div>
-    </footer> -->
+    </footer>
     <!-- End Footer  -->
 
     <!-- Start copyright  -->
-    <!-- <div class="footer-copyright">
+    <div class="footer-copyright">
         <p class="footer-company">All Rights Reserved. &copy; 2018 <a href="#">ThewayShop</a> Design By :
             <a href="https://html.design/">html design</a></p>
-    </div> -->
+    </div>
     <!-- End copyright  -->
 
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>

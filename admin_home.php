@@ -10,13 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>THE MEHANDI STUDIO</title>
+    <title>THE MEHANDI</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/logo design/logo1.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
     <!-- Bootstrap CSS -->
@@ -119,22 +119,55 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
+                         <li class="nav-item"><a class="nav-link" href="henna_update">Henna History</a></li>
+                        <li class="dropdown"><a class="nav-link" href="view_category" data-toggle="dropdown">Category</a>
+						<ul class="dropdown-menu">
+								<li><a href="addcat.php">Add</a></li>
+							<li><a href="view_category.php">View</a></li>
+							<li><a href="edit_category.php">Edit</a></li>
+							<li><a href="rem_category.php">Remove</a></li>
+						</ul>
+						</li>
+                        <li class="dropdown"> <a href="productview.php" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Product</a>
                             <ul class="dropdown-menu">
-								<li><a href="shop.html">Sidebar Shop</a></li>
-								<li><a href="shop-detail.html">Shop Detail</a></li>
-                                <li><a href="cart.html">Cart</a></li>
+								<li><a href="addproduct.php">Add</a></li>
+								<li><a href="productview.php">View</a></li>
+								<li><a href="editprod.php">Edit</a></li>
+                                <!-- <li><a href="#">Cart</a></li>
                                 <li><a href="checkout.html">Checkout</a></li>
                                 <li><a href="my-account.html">My Account</a></li>
-                                <li><a href="wishlist.html">Wishlist</a></li>
+                                <li><a href="wishlist.html">Wishlist</a></li> -->
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
-						<li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Orders</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">View</a></li>
+                                <li><a href="#">Manage</a></li>
+                                <!-- <li><a href="#">Cart</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                                <li><a href="my-account.html">My Account</a></li>
+                                <li><a href="wishlist.html">Wishlist</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Reports</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">User List</a></li>
+                                <li><a href="#">Reports</a></li>
+                                <!-- <li><a href="#">Cart</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                                <li><a href="my-account.html">My Account</a></li>
+                                <li><a href="wishlist.html">Wishlist</a></li> -->
+                            </ul>
+                        </li>
+                         <li class="nav-item"><a class="nav-link" href="">Payments</a></li>
+                        
+                         <li class="nav-item"><a class="nav-link" href="">Feedback</a></li>
+                        
+                         <li class="nav-item"><a class="nav-link" href="login.php">Logout</a></li>
+                        
+                       
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -160,17 +193,17 @@
                 <li class="cart-box">
                     <ul class="cart-list">
                         <li>
-                            <a href="#" class="photo"><img src="images/img-pro-01.jpg" class="cart-thumb" alt="" /></a>
+                            <a href="#" class="photo"><img src="images\background image\a.jpg" class="cart-thumb" alt="" /></a>
                             <h6><a href="#">Delica omtantur </a></h6>
                             <p>1x - <span class="price">$80.00</span></p>
                         </li>
                         <li>
-                            <a href="#" class="photo"><img src="images/img-pro-02.jpg" class="cart-thumb" alt="" /></a>
+                            <a href="#" class="photo"><img src="images\background image\a.jpg" class="cart-thumb" alt="" /></a>
                             <h6><a href="#">Omnes ocurreret</a></h6>
                             <p>1x - <span class="price">$60.00</span></p>
                         </li>
                         <li>
-                            <a href="#" class="photo"><img src="images/img-pro-03.jpg" class="cart-thumb" alt="" /></a>
+                            <a href="#" class="photo"><img src="images\background image\a.jpg" class="cart-thumb" alt="" /></a>
                             <h6><a href="#">Agam facilisis</a></h6>
                             <p>1x - <span class="price">$40.00</span></p>
                         </li>
@@ -203,39 +236,39 @@
     <div id="slides-shop" class="cover-slides">
         <ul class="slides-container">
             <li class="text-center">
-                <img src="images\background image\c.jpg" alt="">
+                <img src="images\background image\e.jpg" alt="">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="m-b-20"><strong>Welcome To <br> THE MEHANDI STUDIO</strong></h1>
-                            <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
+                            <h1 class="m-b-20"><strong>Welcome To <br>THE MEHANDI STUDIO</strong></h1>
+                            <!-- <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p> -->
                             <p><a class="btn hvr-hover" href="#">Shop New</a></p>
                         </div>
                     </div>
                 </div>
             </li>
             <li class="text-center">
-                <img src="images\background image\b.jpg" alt="">
+                <img src="images\background image\f.jpg" alt="">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <h1 class="m-b-20"><strong>Welcome To <br> THE MEHANDI STUDIO</strong></h1>
-                            <p class="m-b-40">CELEBRATE  YOUR SPECIAL DAY WITH US.</p>
+                            <!-- <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p> -->
                             <p><a class="btn hvr-hover" href="#">Shop New</a></p>
                         </div>
                     </div>
                 </div>
             </li>
             <li class="text-center">
-                <img src="images\background image\a.jpg" alt="">
+                <img src="images\background image\e.jpg" alt="">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="m-b-20"><strong>Welcome To <br> THE MEHANDI STUDIO </strong></h1>
-                            <p class="m-b-40">CELEBRATE  YOUR SPECIAL DAY WITH US</p>
+                            <!-- <h1 class="m-b-20"><strong>Welcome To <br> THE MEHA0">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p> -->
                             <p><a class="btn hvr-hover" href="#">Shop New</a></p>
                         </div>
-                    </div>
+                    </div>NDI</strong></h1>
+                            <p class="m-b-4
                 </div>
             </li>
         </ul>
@@ -246,33 +279,71 @@
     </div>
     <!-- End Slider -->
 
-    <!-- Start Categories  --><!-- End Categories -->
+    <!-- Start Categories  -->
+    <div class="categories-shop">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box"><a class="btn hvr-hover" href="#">Lorem ipsum dolor</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+					<h2>Welcome Admin, choose options below</h2>
+                   <table>
+					   <tr>
+			<td><a href="henna_update.php">Henna History Update</a></td>
+		   </tr>
+        <tr>
+          <td><a href="addcat.php">Add Category</a></td>
+		   </tr>
+		       <tr>
+          <td><a href="view_category.php">View Category</a></td>
+		   </tr>
+		   
+		   
+		   <tr>
+			<td><a href="edit_category.php">Edit Category</a></td>
+		   </tr>
+		   <tr>
+			<td><a href="rem_category.php">Remove Category</a></td>
+	</tr>
+		   <tr>
+          <td><a href="addprod.php">Add Product</a></td>
+		  </tr>
+		   <tr>
+          <td><a href="productview.php">View Product</a></td>
+		  </tr>
+		   		   <tr>
+          <td><a href="editprod.php">Edit Products</a></td>
+		  </tr>
+		   <tr>
+			 <td><a href="remprod.php">Remove Product</a></td>
+        </tr>
+					    <tr>
+			 <td><a href="login.php">Logout</a></td>
+        </tr>
+      </table>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box"><a class="btn hvr-hover" href="#">Lorem ipsum dolor</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Categories -->
 	
 	<div class="box-add-products">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-12">
 					<div class="offer-box-products">
-						<img class="img-fluid" src="images\background image\f.jpg" alt="" />
+						<img class="img-fluid" src="images/henna works/b.WEBP" alt="" />
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-12">
 					<div class="offer-box-products">
-						<h2>History of Henna</h2>
-					<?php
-						 include('dbconnection.php');
-						$sql="select*from henna";
-						$result = $con->query($sql);
-
-if ($result->num_rows > 0) {
-  // output data of each row
-	
-	
-  while($row = $result->fetch_assoc()) {
-   echo $row['Description'];
-  }
-}
-						?>
+						<img class="img-fluid" src="images/arabic design/a.jpg" alt="" />
 					</div>
 				</div>
 			</div>
@@ -587,15 +658,16 @@ if ($result->num_rows > 0) {
 					<div class="col-lg-4 col-md-12 col-sm-12">
 						<div class="footer-top-box">
 							<h3>Social Media</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<p>AVAILABLE MEDIA/p>
 							<ul>
-                                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                                <!-- <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li> -->
                                 <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab instagram" aria-hidden="true"></i></a></li>
                             </ul>
 						</div>
 					</div>
@@ -627,13 +699,13 @@ if ($result->num_rows > 0) {
                             <h4>Contact Us</h4>
                             <ul>
                                 <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Address: SHEHLA AKBAR <br>KOYILANDY,CALICUT<br> 673305 </p>
+                                    <p><i class="fas fa-map-marker-alt"></i>Address: SHEHLA AKBAR  <br>KOYILANDY,CALICUT,<br> 673305 </p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+91 7306601543">+91-7306601543</a></p>
+                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+91-7306601543">+91-7306601543</a></p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-envelope"></i>Email: <a href="themehandistudio@gmail.com">themehandistudio@gmail.com</a></p>
+                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:themehandistudio@gmail.com">themehandistudio@gmail.com</a></p>
                                 </li>
                             </ul>
                         </div>
