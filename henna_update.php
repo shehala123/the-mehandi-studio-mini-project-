@@ -40,14 +40,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>The mehandi studio</title>
+    <title>ThewayShop - Ecommerce Bootstrap 4 HTML Template</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Site Icons -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="logo design" href="images/logo design/logo1.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -133,85 +133,7 @@
     <!-- End Main Top -->
 
     <!-- Start Main Top -->
-    <header class="main-header">
-        <!-- Start Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
-            <div class="container">
-                <!-- Start Header Navigation -->
-                <div class="navbar-header">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-bars"></i>
-                </button>
-                    <a class="navbar-brand" href="index.php"><img src="images/logo design/logo1.png" class="logo" alt=""></a>
-                </div>
-                <!-- End Header Navigation -->
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="navbar-menu">
-					<ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-						<li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-						<li class="dropdown">
-							<a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
-							<ul class="dropdown-menu">
-								<li><a href="shop.html">Sidebar Shop</a></li>
-								<li><a href="shop-detail.html">Shop Detail</a></li>
-								<li><a href="cart.html">Cart</a></li>
-								<li><a href="checkout.html">Checkout</a></li>
-								<li><a href="my-account.html">My Account</a></li>
-								<li><a href="wishlist.html">Wishlist</a></li>
-							</ul>
-						</li>
-						<li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-						<li class="nav-item active"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-
-                <!-- Start Atribute Navigation -->
-                <div class="attr-nav">
-                    <!-- <ul>
-                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-                        <li class="side-menu"><a href="#">
-						<i class="fa fa-shopping-bag"></i>
-                            <span class="badge">3</span>
-							<p>My Cart</p>
-					</a></li>
-                    </ul> -->
-                </div>
-                <!-- End Atribute Navigation -->
-            </div>
-            <!-- Start Side Menu -->
-            <!-- <div class="side">
-                <a href="#" class="close-side"><i class="fa fa-times"></i></a>
-                <li class="cart-box">
-                    <ul class="cart-list">
-                        <li>
-                            <a href="#" class="photo"><img src="images/img-pro-01.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Delica omtantur </a></h6>
-                            <p>1x - <span class="price">$80.00</span></p>
-                        </li>
-                        <li>
-                            <a href="#" class="photo"><img src="images/img-pro-02.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Omnes ocurreret</a></h6>
-                            <p>1x - <span class="price">$60.00</span></p>
-                        </li>
-                        <li>
-                            <a href="#" class="photo"><img src="images/img-pro-03.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Agam facilisis</a></h6>
-                            <p>1x - <span class="price">$40.00</span></p>
-                        </li>
-                        <li class="total">
-                            <a href="#" class="btn btn-default hvr-hover btn-cart">VIEW CART</a>
-                            <span class="float-right"><strong>Total</strong>: $180.00</span>
-                        </li>
-                    </ul>
-                </li>
-            </div> -->
-            <!-- End Side Menu -->
-        </nav>
-        <!-- End Navigation -->
-    </header>
+    <?php include("admin_menu.php");?>
     <!-- End Main Top -->
 
     <!-- Start Top Search -->
@@ -231,7 +153,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Henna Update</h2>
+                    <h2>ADD HENNA HISTORY</h2>
                     
                 </div>
             </div>
@@ -248,7 +170,7 @@
                        <!--  <h2>GET IN TOUCH</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio justo, ultrices ac nisl sed, lobortis porta elit. Fusce in metus ac ex venenatis ultricies at cursus mauris.</p> -->
                              <form method="POST">
-        <table  align="center" border="0"> 
+        <table  align="center" border="0">
           <tr>
             <td>Henna Description</td>
             <td><textarea name="decription" class="form-control"></textarea> <br></td>
@@ -269,31 +191,39 @@
 				<!-- <div class="col-lg-4 col-sm-12">
                     <div class="contact-info-left">
                         <h2>CONTACT INFO</h2>
-                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna diam, maximus ut ullamcorper quis, placerat id eros. Duis semper justo sed condimentum rutrum. Nunc tristique purus turpis. Maecenas vulputate. </p> -->
-                        <!-- <ul>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna diam, maximus ut ullamcorper quis, placerat id eros. Duis semper justo sed condimentum rutrum. Nunc tristique purus turpis. Maecenas vulputate. </p>
+                        <ul>
                             <li>
-                                <p><i class="fas fa-map-marker-alt"></i>Address: SHEHLA AKBAR<br>KOYILANDY,CALICUT<br> 673305 </p>
+                                <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 9000 <br>Preston Street Wichita,<br> KS 87213 </p>
                             </li>
                             <li>
-                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+91-7306601543">+91-7306601543</a></p>
+                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+1-888 705 770</a></p>
                             </li>
                             <li>
-                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:themehandistudio123@gmail.com">themehandistudio123@gmail.com</a></p>
+                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
                             </li>
                         </ul>
                     </div>
-                </div>  --> 
+                </div> -->
             </div>
         </div>
     </div>
     <!-- End Cart -->
 
-    <!-- Start Instagram Feed  -->
-    <div class="instagram-box">
+     <!-- Start Instagram Feed  -->
+     <div class="instagram-box">
         <div class="main-instagram owl-carousel owl-theme">
             <div class="item">
                 <div class="ins-inner-box">
                     <img src="images/background image/a.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="images/indian design/IMG_20210925_110359_639.webp" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -309,7 +239,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background image/c.jpg" alt="" />
+                    <img src="images/arabic design/a.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -317,7 +247,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background image/d.jpg" alt="" />
+                    <img src="images/indian design/b.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -325,7 +255,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background image/e.jpg" alt="" />
+                    <img src="images/indian design/c.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -333,7 +263,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background image/f.jpg" alt="" />
+                    <img src="images/indian design/d.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -341,7 +271,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background image/g.jpg" alt="" />
+                    <img src="images/indian design/e.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -349,7 +279,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background image/h.jpg" alt="" />
+                    <img src="images/indian design/f.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -357,15 +287,14 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background image/i.jpg" alt="" />
+                    <img src="images/indian design/g.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
-            
         </div>
-    </div> -->
+    </div>
     <!-- End Instagram Feed  -->
 
 
@@ -414,7 +343,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-widget">
-                            <h4>About THE MEHANDI STUDIO</h4>
+                            <h4>About Freshshop</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 							
                         </div>
@@ -437,13 +366,13 @@
                             <h4>Contact Us</h4>
                             <ul>
                                 <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>SHEHLA AKBAR <br>KOYILANDY,CALICUT<br> 673305 </p>
+                                    <p><i class="fas fa-map-marker-alt"></i>Address: SHEHLA AKBAR <br>KOYILANDY,CALICUT,<br> 673305 </p>
                                 </li>
                                 <li>
                                     <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+91-7306601543">+91-7306601543</a></p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:themehandistudio123@gmail.com">themehandistudio123@gmail.com</a></p>
+                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:themehandistudio@gmail.com">themehandistudio@gmail.com</a></p>
                                 </li>
                             </ul>
                         </div>
@@ -452,7 +381,7 @@
             </div>
         </div>
     </footer>
-    <!-- End Footer  -->
+    <!-- End Footer -->
 
     <!-- Start copyright  -->
     <!-- <div class="footer-copyright">

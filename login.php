@@ -26,7 +26,7 @@
       }
 		 if($user['utype']=="user")
       {
-        session_start();
+        //session_start();
         $_SESSION['UID']=$utype['Uid'];
         $_SESSION['stat']="Active";
         header("Location:user_home.php");
@@ -53,14 +53,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>the mehandi studio </title>
+    <title>ThewayShop - Ecommerce Bootstrap 4 HTML Template</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/logo design/logo1.png" type="image">
-    <link rel="apple-touch-icon" href="images/logo design/logo1.png">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -155,7 +155,7 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                    <a class="navbar-brand" href="index.php"><img src="images\logo design\logo1.png" class="logo" alt=""></a>
+                    <a class="navbar-brand" href="index.php"><img src="images/logo.png" class="logo" alt=""></a>
                 </div>
                 <!-- End Header Navigation -->
 
@@ -195,7 +195,7 @@
                 <!-- End Atribute Navigation -->
             </div>
             <!-- Start Side Menu -->
-            <!-- <div class="side">
+            <div class="side">
                 <a href="#" class="close-side"><i class="fa fa-times"></i></a>
                 <li class="cart-box">
                     <ul class="cart-list">
@@ -249,7 +249,7 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
     <!-- End All Title Box -->
 
     <!-- Start Contact Us  -->
@@ -307,11 +307,12 @@
     <!-- End Cart -->
 
     <!-- Start Instagram Feed  -->
-    <div class="instagram-box">
+     <!-- Start Instagram Feed  -->
+     <div class="instagram-box">
         <div class="main-instagram owl-carousel owl-theme">
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/indian design/IMG_20200814_221946_263.jpg" alt="" />
+                    <img src="images/background image/a.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -319,7 +320,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/indian Design/IMG_1690.jpg" alt="" />
+                    <img src="images/indian design/IMG_20210925_110359_639.webp" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -327,7 +328,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/indian design/IMG-20211223-WA0204.jpg" alt="" />
+                    <img src="images/background image/b.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -335,7 +336,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/indian design/IMG-20210122-WA0028.jpg" alt="" />
+                    <img src="images/arabic design/a.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -343,7 +344,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/indian design/IMG-20201121-WA0022.jpg" alt="" />
+                    <img src="images/indian design/b.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -351,15 +352,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/indian design/IMG-20201123-WA0168.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-07.jpg" alt="" />
+                    <img src="images/indian design/c.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -367,7 +360,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-08.jpg" alt="" />
+                    <img src="images/indian design/d.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -375,7 +368,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-09.jpg" alt="" />
+                    <img src="images/indian design/e.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -383,12 +376,20 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/instagram-img-05.jpg" alt="" />
+                    <img src="images/indian design/f.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-            </div> -->
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <img src="images/indian design/g.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- End Instagram Feed  -->
@@ -462,13 +463,13 @@
                             <h4>Contact Us</h4>
                             <ul>
                                 <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Address: SHEHLA AKBAR <br>KOYILANDY,CALICUT,<br>673305 </p>
+                                    <p><i class="fas fa-map-marker-alt"></i>Address: SHEHLA AKBAR <br>KOYILANDY,CALICUT,<br> 673305 </p>
                                 </li>
                                 <li>
                                     <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+91-7306601543">+91-7306601543</a></p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:themehandistudio123@gmail.com">themehandistudio123.com</a></p>
+                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:themehandistudio@gmail.com">themehandistudio@gmail.com</a></p>
                                 </li>
                             </ul>
                         </div>
@@ -477,13 +478,13 @@
             </div>
         </div>
     </footer>
-    <!-- End Footer  -->
+    <!-- End Footer -->
 
     <!-- Start copyright  -->
-    <div class="footer-copyright">
+    <!-- <div class="footer-copyright">
         <p class="footer-company">All Rights Reserved. &copy; 2018 <a href="#">ThewayShop</a> Design By :
             <a href="https://html.design/">html design</a></p>
-    </div>
+    </div> -->
     <!-- End copyright  -->
 
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>

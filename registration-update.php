@@ -111,7 +111,7 @@ if(isset($_POST["uid"])){
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>THE MEHANDI STUDIO</title>
+    <title>the mehandi studio</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -338,12 +338,12 @@ if(isset($_POST["uid"])){
                             </div>
 						<div class="form-group">
                                 <label>Email</label>
-                                <input type="text" name="Email" maxlength="30"class="form-control" value="<?php echo $Email; ?>">
+                                <input type="Email" name="Email" maxlength="30"class="form-control" value="<?php echo $Email; ?>">
                                 <span class="form-text"><?php echo $Email_err; ?></span>
                             </div>
 						<div class="form-group">
                                 <label>Phone</label>
-                                <input type="text" name="Phone" maxlength="12"class="form-control" value="<?php echo $Phone; ?>">
+                                <input type="number" name="Phone" maxlength="10"class="form-control" value="<?php echo $Phone; ?>">
                                 <span class="form-text"><?php echo $Phone_err; ?></span>
                             </div>
 
@@ -375,12 +375,12 @@ if(isset($_POST["uid"])){
     </div>
     <!-- End Cart -->
 
-    <!-- Start Instagram Feed  -->
-    <div class="instagram-box">
+     <!-- Start Instagram Feed  -->
+     <div class="instagram-box">
         <div class="main-instagram owl-carousel owl-theme">
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background Image/b.jpg" alt="" />
+                    <img src="images/background image/a.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -388,7 +388,7 @@ if(isset($_POST["uid"])){
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background Image/c.jpg" alt="" />
+                    <img src="images/indian design/IMG_20210925_110359_639.webp" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -396,7 +396,7 @@ if(isset($_POST["uid"])){
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background Image/d.jpg" alt="" />
+                    <img src="images/background image/b.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -404,7 +404,7 @@ if(isset($_POST["uid"])){
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background Image/e.jpg" alt="" />
+                    <img src="images/arabic design/a.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -412,7 +412,7 @@ if(isset($_POST["uid"])){
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background Image/f.jpg" alt="" />
+                    <img src="images/indian design/b.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -420,7 +420,7 @@ if(isset($_POST["uid"])){
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background Image/g.jpg" alt="" />
+                    <img src="images/indian design/c.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -428,7 +428,7 @@ if(isset($_POST["uid"])){
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background Image/h.jpg" alt="" />
+                    <img src="images/indian design/d.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -436,7 +436,7 @@ if(isset($_POST["uid"])){
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background Image/i.jpg" alt="" />
+                    <img src="images/indian design/e.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -444,7 +444,7 @@ if(isset($_POST["uid"])){
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/indian design/IMG-20211223-WA0204.jpg" alt="" />
+                    <img src="images/indian design/f.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -452,7 +452,7 @@ if(isset($_POST["uid"])){
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/indian design/IMG-20201123-WA0168.jpg" alt="" />
+                    <img src="images/indian design/g.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -531,13 +531,13 @@ if(isset($_POST["uid"])){
                             <h4>Contact Us</h4>
                             <ul>
                                 <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 3756 <br>Preston Street Wichita,<br> KS 67213 </p>
+                                    <p><i class="fas fa-map-marker-alt"></i>Address: SHEHLA AKBAR <br>KOYILANDY,CALICUT,<br> 673305 </p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+1-888 705 770</a></p>
+                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+91-7306601543">+91-7306601543</a></p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
+                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:themehandistudio@gmail.com">themehandistudio@gmail.com</a></p>
                                 </li>
                             </ul>
                         </div>
@@ -546,13 +546,13 @@ if(isset($_POST["uid"])){
             </div>
         </div>
     </footer>
-    <!-- End Footer  -->
+    <!-- End Footer -->
 
     <!-- Start copyright  -->
-    <div class="footer-copyright">
+    <!-- <div class="footer-copyright">
         <p class="footer-company">All Rights Reserved. &copy; 2018 <a href="#">ThewayShop</a> Design By :
             <a href="https://html.design/">html design</a></p>
-    </div>
+    </div> -->
     <!-- End copyright  -->
 
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>

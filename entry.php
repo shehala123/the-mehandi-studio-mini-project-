@@ -10,13 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>ThewayShop - Ecommerce Bootstrap 4 HTML Template</title>
+    <title>THE MEHANDI STUDIO</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/logo design/logo1.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
     <!-- Bootstrap CSS -->
@@ -277,12 +277,12 @@
     </div>
     <!-- End Cart -->
 
-    <!-- Start Instagram Feed  -->
-    <div class="instagram-box">
+     <!-- Start Instagram Feed  -->
+     <div class="instagram-box">
         <div class="main-instagram owl-carousel owl-theme">
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background Image/b.jpg" alt="" />
+                    <img src="images/background image/a.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -290,7 +290,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background Image/c.jpg" alt="" />
+                    <img src="images/indian design/IMG_20210925_110359_639.webp" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -298,7 +298,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background Image/d.jpg" alt="" />
+                    <img src="images/background image/b.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -306,7 +306,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background Image/e.jpg" alt="" />
+                    <img src="images/arabic design/a.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -314,7 +314,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background Image/f.jpg" alt="" />
+                    <img src="images/indian design/b.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -322,7 +322,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background Image/g.jpg" alt="" />
+                    <img src="images/indian design/c.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -330,7 +330,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background Image/h.jpg" alt="" />
+                    <img src="images/indian design/d.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -338,7 +338,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/background Image/i.jpg" alt="" />
+                    <img src="images/indian design/e.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -346,7 +346,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/indian design/IMG-20211223-WA0204.jpg" alt="" />
+                    <img src="images/indian design/f.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -354,7 +354,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="images/indian design/IMG-20201123-WA0168.jpg" alt="" />
+                    <img src="images/indian design/g.jpg" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -393,7 +393,7 @@
 					<div class="col-lg-4 col-md-12 col-sm-12">
 						<div class="footer-top-box">
 							<h3>Social Media</h3>
-							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 							<ul>
                                 <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
@@ -433,13 +433,13 @@
                             <h4>Contact Us</h4>
                             <ul>
                                 <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Address:SHEHLA AKBAR <br>KOYILANDY,CALICUT,<br> 673305 </p>
+                                    <p><i class="fas fa-map-marker-alt"></i>Address: SHEHLA AKBAR <br>KOYILANDY,CALICUT,<br> 673305 </p>
                                 </li>
                                 <li>
                                     <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+91-7306601543">+91-7306601543</a></p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:themehandistudio123@gmail.com">themehandistudio123@gmail.com</a></p>
+                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:themehandistudio@gmail.com">themehandistudio@gmail.com</a></p>
                                 </li>
                             </ul>
                         </div>
@@ -448,7 +448,7 @@
             </div>
         </div>
     </footer>
-    <!-- End Footer  -->
+    <!-- End Footer -->
 
     <!-- Start copyright  -->
     <!-- <div class="footer-copyright">
